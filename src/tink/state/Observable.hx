@@ -219,7 +219,7 @@ private class BasicObservable<T> implements ObservableObject<T> {
     
   public function new(getValue, changed:Signal<Noise>) {
     this.getValue = getValue;
-    this.changed = changed.filter(function (_) return valid && !(valid = false));//the things you do for neat output ...
+    this.changed = changed;
   }
     
 }
